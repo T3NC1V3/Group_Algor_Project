@@ -1,11 +1,11 @@
 #include <iostream>
-#include <vector>
-#include <climits>
+#include <vector> // for the arrays
+#include <climits> 
 
 using namespace std;
 
-#define NUM_NODES 23
-#define INF INT_MAX
+#define NUM_NODES 23 // THe number of nodes counting from A to W 
+#define INF INT_MAX // used to initialize distances later
 
 // Function to find the node with the minimum distance value
 int minDistance(const vector<int>& dist, const vector<bool>& visited) {
@@ -19,7 +19,7 @@ int minDistance(const vector<int>& dist, const vector<bool>& visited) {
     return minIndex;
 }
 
-// Function to print the shortest paths from start to all nodes
+// Function to print the shortest paths 
 void printShortcuts(const vector<int>& dist, const vector<int>& parent, char startNode) {
     cout << "Shortest paths from node " << startNode << " to all nodes:\n";
     for (int i = 0; i < NUM_NODES; ++i) {
@@ -54,7 +54,7 @@ void dijkstra(const vector<vector<int>>& graph, int startNode) {
         }
     }
 
-    // Print the shortest paths from start to all nodes
+    // Print the shortest paths
     printShortcuts(distances, parent, char('A' + startNode));
 }
 
@@ -90,8 +90,11 @@ int main() {
     // Start node 
     int startNode = 0; // Starting from node A
 
-    // Dijkstra's
+    // Dijkstra's call
     dijkstra(graph, startNode);
 
     return 0;
 }
+
+// Vincent Yang 100895411
+// Aaron Tran 100825433
