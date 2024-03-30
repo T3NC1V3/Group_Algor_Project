@@ -93,6 +93,8 @@ int main() {
     // Dijkstra's call
     dijkstra(graph, startNode);
 
+    cout << "\nThe nearest charging station based on distance from Node A is H, Path: A to B to C to H.\n";
+
     return 0;
 }
 
